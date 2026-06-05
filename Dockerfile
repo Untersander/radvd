@@ -13,6 +13,6 @@
 # RUN tar -xzf radvd.tar.gz --strip-components=1
 # RUN ./configure --prefix=/usr/local --sysconfdir=/etc --mandir=/usr/share/man
 # RUN ./configure --help && exit 1
-FROM alpine:3.22
-RUN apk add --no-cache radvd=2.20-r0 && mkdir -p /run/radvd
+FROM alpine:3.23.4
+RUN apk add --no-cache radvd=2.21-r0 && mkdir -p /run/radvd
 CMD [ "radvd" ]
